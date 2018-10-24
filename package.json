@@ -1,0 +1,34 @@
+{
+  "name": "synomn",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prestart": "npm install",
+    "start": "node ./bin/www"
+  },
+  "description": "Synomn crawler for www.sinonimo.com.br",
+  "main": "index.js",
+  "keywords": [
+    "Synonm",
+    "crawler",
+    "rest"
+  ],
+  "author": "Ronniery Borges Correa",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "iconv-lite": "^0.4.24",
+    "mongodb": "^3.1.8",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "typescript": "^3.2.0-dev.20181023",
+    "xmlbuilder": "^10.1.1"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^3.1.12",
+    "@types/cheerio": "^0.22.9",
+    "@types/node": "^10.12.0",
+    "@types/request-promise": "^4.1.42",
+    "@types/xmlbuilder": "0.0.34"
+  }
+}
