@@ -1,34 +1,47 @@
 {
-  "name": "synomn",
+  "name": "synom",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "prestart": "npm install",
     "start": "node ./bin/www"
   },
-  "description": "Synomn crawler for www.sinonimo.com.br",
+  "description": "Synonym crawler for www.sinonimo.com.br",
   "main": "index.js",
   "keywords": [
-    "Synonm",
+    "Synonym",
     "crawler",
-    "rest"
+    "words",
+    "scraper"
   ],
   "author": "Ronniery Borges Correa",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^0.22.0",
-    "iconv-lite": "^0.4.24",
-    "mongodb": "^3.1.8",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.2",
-    "typescript": "^3.2.0-dev.20181023",
-    "xmlbuilder": "^10.1.1"
+    "async": "^3.2.0",
+    "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^8.2.0",
+    "iconv-lite": "^0.5.1",
+    "lodash": "^4.17.15",
+    "module-alias": "^2.2.2",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.6",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "typescript": "^3.8.3",
+    "xmlbuilder": "^15.1.0"
   },
   "devDependencies": {
-    "@types/mongodb": "^3.1.12",
-    "@types/cheerio": "^0.22.9",
-    "@types/node": "^10.12.0",
-    "@types/request-promise": "^4.1.42",
-    "@types/xmlbuilder": "0.0.34"
+    "@types/cheerio": "^0.22.17",
+    "@types/lodash": "^4.14.149",
+    "@types/module-alias": "^2.0.0",
+    "@types/mongodb": "^3.5.3",
+    "@types/mongoose": "^5.7.7",
+    "@types/node": "^12.12.31",
+    "@types/request-promise": "^4.1.46",
+    "@types/xmlbuilder": "11.0.1"
+  },
+  "_moduleAliases": {
+    "@models": "models/",
+    "@interfaces": "interfaces/"
   }
 }

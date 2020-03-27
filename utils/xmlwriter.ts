@@ -1,8 +1,6 @@
-import * as builder from "xmlbuilder";
-import * as fs from "fs";
+import builder from "xmlbuilder";
+import fs from "fs";
 
-import { MongoConnection, Repository } from './respository';
-import { Scope, Sense } from './index';
 
 export class XmlWriter {
 

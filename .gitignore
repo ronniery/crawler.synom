@@ -75,9 +75,10 @@ typings
 
 *.js
 *.js.map
+*.d.ts
 *.map
 *.js
 *.xml
+/*.tsbuildinfo
 
 # End of https://www.gitignore.io/api/visualstudiocode,node,typings
-
