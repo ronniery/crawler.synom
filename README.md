@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="https://img.shields.io/badge/cheerio-1.0.0rc.3-darkslateblue?style=for-the-badge" style="margin-left: 20px" />
+	<img src="https://img.shields.io/badge/cheerio-1.0.0rc.3-darkslateblue?style=for-the-badge" />
 	<img src="https://img.shields.io/badge/dotenv-8.2.0-rosybrown?style=for-the-badge" />
 	<img src="https://img.shields.io/badge/iconv/lite-0.5.1-darkolivegreen?style=for-the-badge" />
 	<img src="https://img.shields.io/badge/lodash-4.17.15-red?style=for-the-badge" />
