@@ -82,3 +82,4 @@ typings
 /*.tsbuildinfo
 
 # End of https://www.gitignore.io/api/visualstudiocode,node,typings
+/state.json

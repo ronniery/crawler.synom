@@ -1,3 +1,5 @@
+import Synonym from "./synonym";
+
 export default interface Sense {
 	
 	/**
@@ -8,5 +10,5 @@ export default interface Sense {
 	/**
 	 * List of synonymous to given word
 	 */
-	synomn: string[];
+	synonyms: Synonym[];
 }

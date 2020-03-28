@@ -4,14 +4,18 @@ import Scope from "../interfaces/scope";
 export interface DocModel extends Scope, Document { }
 
 const schema = new Schema({
-	word: { type: String, index: true },
-	wordUrl: { type: String },
+	word: { type: String },
+	wordUrl: { type: String, index: true },
 	senses: [{
 		description: { type: String },
-		synom: [String]
+		synonyms: [{
+			word: { type: String },
+			url: { type: String }
+		}]
 	}]
 }, {
-	collection: 'scopes'
+	collection: 'scopes',
+	timestamps: true
 })
 
 export const Scope: Model<DocModel> = model<DocModel>('Scope', schema);

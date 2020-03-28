@@ -1,21 +1,9 @@
 {
-  "name": "synom",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "prestart": "npm install",
-    "start": "node ./bin/www"
-  },
+  "name": "crawler.synom",
+	"version": "1.0.0",
+	"private": true,
   "description": "Synonym crawler for www.sinonimo.com.br",
   "main": "index.js",
-  "keywords": [
-    "Synonym",
-    "crawler",
-    "words",
-    "scraper"
-  ],
-  "author": "Ronniery Borges Correa",
-  "license": "ISC",
   "dependencies": {
     "async": "^3.2.0",
     "cheerio": "^1.0.0-rc.3",
@@ -36,12 +24,25 @@
     "@types/module-alias": "^2.0.0",
     "@types/mongodb": "^3.5.3",
     "@types/mongoose": "^5.7.7",
-    "@types/node": "^12.12.31",
+    "@types/node": "^13.9.5",
     "@types/request-promise": "^4.1.46",
     "@types/xmlbuilder": "11.0.1"
   },
   "_moduleAliases": {
     "@models": "models/",
     "@interfaces": "interfaces/"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronniery/crawler.synom.git"
+  },
+  "author": "Ronniery Borges Correa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronniery/crawler.synom/issues"
+  },
+  "homepage": "https://github.com/ronniery/crawler.synom#readme"
 }

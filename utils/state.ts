@@ -1,6 +1,6 @@
-import fs from 'fs'
-import path from 'path'
-import _ from 'lodash'
+import fs from 'fs';
+import path from 'path';
+import _ from 'lodash';
 
 const exists = (path: string): boolean => fs.existsSync(path)
 

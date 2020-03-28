@@ -7,12 +7,14 @@
         "**/.DS_Store": true,
         "**/*.js": true,
         "**/*.js.map": true,
-        "node_modules": false,
+        "node_modules": true,
         ".gitignore": true,
-				"package.json": false,
+				"package.json": true,
 				"LICENSE": true,
 				".editorconfig": true,
 				"package-lock.json": true,
+				"tsconfig.json": true,
+				"tsconfig.tsbuildinfo": true,
 				"README.md": true,
 				"**/*.d.ts": true
     }
