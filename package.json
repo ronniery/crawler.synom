@@ -1,36 +1,35 @@
 {
   "name": "crawler.synom",
-	"version": "1.0.0",
-	"private": true,
+  "version": "1.0.0",
+  "private": true,
   "description": "Synonym crawler for www.sinonimo.com.br",
   "main": "index.js",
   "dependencies": {
-    "async": "^3.2.0",
     "cheerio": "^1.0.0-rc.3",
     "dotenv": "^8.2.0",
     "iconv-lite": "^0.5.1",
     "lodash": "^4.17.15",
-    "module-alias": "^2.2.2",
-    "mongodb": "^3.5.5",
+    "minimist": "^1.2.5",
     "mongoose": "^5.9.6",
     "request": "^2.88.2",
     "request-promise": "^4.2.5",
     "typescript": "^3.8.3",
-    "xmlbuilder": "^15.1.0"
+    "xmlbuilder": "^15.1.0",
+    "module-alias": "^2.2.2"
   },
   "devDependencies": {
+    "@types/module-alias": "^2.0.0",
+    "@types/minimist": "^1.2.0",
     "@types/cheerio": "^0.22.17",
     "@types/lodash": "^4.14.149",
-    "@types/module-alias": "^2.0.0",
-    "@types/mongodb": "^3.5.3",
     "@types/mongoose": "^5.7.7",
     "@types/node": "^13.9.5",
-    "@types/request-promise": "^4.1.46",
-    "@types/xmlbuilder": "11.0.1"
+    "@types/request-promise": "^4.1.46"
   },
   "_moduleAliases": {
+    "@interfaces": "interfaces/",
     "@models": "models/",
-    "@interfaces": "interfaces/"
+    "@utils": "utils/"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

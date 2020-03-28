@@ -1,5 +1,5 @@
 import { Schema, Document, Model, model } from 'mongoose';
-import Scope from "../interfaces/scope";
+import Scope from "@interfaces/scope";
 
 export interface DocModel extends Scope, Document { }
 

@@ -1,17 +1,21 @@
-require('dotenv').config();
 require('module-alias/register');
+require('dotenv').config();
 
 import _ from 'lodash';
 import mongoose from 'mongoose';
 import cheerio from 'cheerio';
 import iconv from 'iconv-lite';
 import request from 'request-promise';
+import minimist from 'minimist';
 
-import { XmlWriter } from './utils/xmlwriter';
-import { State } from './utils/state';
-import { Scope as ScopeModel } from './models/scope';
-import Scope from './interfaces/scope';
-import Synonym from './interfaces/synonym';
+const argv = minimist(process.argv.slice(2))
+const isArgSet = (argname: string) => [true, "true"].includes(argv[argname])
+
+import { XmlWriter } from '@utils/xmlwriter';
+import { State } from '@utils/state';
+import { Scope as ScopeModel } from '@models/scope';
+import Scope from '@interfaces/scope';
+import Synonym from '@interfaces/synonym';
 
 /**
  * The main entry of the core application
@@ -39,7 +43,6 @@ export class Index {
 	 */
 	private readonly state: State;
 
-
 	/**
 	 *Creates an instance of Index.
 	 * @memberof Index
@@ -60,13 +63,12 @@ export class Index {
 	 * The entry start point of this application, that will run recursivelly to get ALL
 	 * words from the target.
 	 *
-	 * @param {boolean} crawler run-crawler Tells if the application should crawl the target
-	 * @param {boolean} xmlBuilder run-xmlBuilder Tells if the application should only generate tesaurus xml
 	 * @returns {(Promise<void | {}>)} Resolve promise as the application finishing
 	 * @memberof Index
 	 */
-	public async run(crawler: boolean, xmlBuilder: boolean): Promise<void | {}> {
+	public async run(): Promise<void | {}> {
 		const scrapAllPages = async (moreLinks = []) => {
+			// The current last word from the website is 'zurzir'
 			await this.getPages(moreLinks)
 				.then(async ({ pages, nextLinks }) => {
 					for (const page of pages) {
@@ -82,12 +84,13 @@ export class Index {
 		}
 
 		try {
-			if (crawler) {
+			if (isArgSet('run-crawler')) {
 				await scrapAllPages()
 			}
 
-			if (xmlBuilder) {
-				new XmlWriter().generate();
+			if (isArgSet('run-xml-builder')) {
+				await new XmlWriter()
+					.generate();
 			}
 		} catch (e) {
 			return e
@@ -108,7 +111,7 @@ export class Index {
 		let stateUrl: string[] = paths
 
 		if (_.isEmpty(paths)) {
-			stateUrl = state.getFromState('nextPaths')
+			stateUrl = state.getFromState('nextPaths') || ''
 
 			if (_.isEmpty(stateUrl)) {
 				stateUrl = urlPaths
@@ -116,7 +119,7 @@ export class Index {
 		}
 
 		const promises = stateUrl.map(async (path: string) =>
-			this.doRequest(`${this.baseUrl}/${path}`)
+			this.doRequest(`${this.baseUrl}/${path}/`)
 		)
 
 		return Promise.all(promises)
@@ -224,7 +227,7 @@ export class Index {
 (async () => {
 	try {
 		await new Index()
-			.run(true, false)
+			.run()
 	} catch (e) {
 		console.log(e.stack)
 	} finally {
