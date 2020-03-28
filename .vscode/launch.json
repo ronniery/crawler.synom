@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "args": ["--run-crawler=false", "--run-xml-builder"],
+            "args": ["--run-crawler"],
             "program": "${workspaceFolder}\\index.js"
         }
     ]
