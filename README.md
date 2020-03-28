@@ -23,7 +23,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-I created the project when my leader needed a bunch of synonym words (on PT-BR) to use it inside our MSSQL database, to enable some text markups to our users, so i handle that problem and found a web site `www.sinonimo.com.br` that contains a lot of synonyms, with that project you will collect all data from the words and their synonym, after that you can generate a thesaurus.xml to import that (if you're on Microsoft ecosystem).
+I created the project when my leader needed a bunch of synonym words (on PT-BR) to use it inside our MSSQL database, to enable some text markups to our users, so i handle that problem with that web site www.sinonimo.com.br that contains a lot of synonyms, with that project you will collect all data from the words and their synonym, after that you can generate a thesaurus.xml to import that (if you're on Microsoft ecosystem).
 
 <!-- GETTING STARTED -->
 ## Getting Started
