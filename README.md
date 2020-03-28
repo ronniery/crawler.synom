@@ -36,7 +36,7 @@ To correct run the project make sure that you have the dependencies installed on
 * npm
 * mongodb
 
-You **need** that package to make the crawler run managed and restarting if needed.
+You **need** that package to make the crawler run managed and restarted if needed.
 ```sh
 npm/yarn install pm2 -g
 ```
