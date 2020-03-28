@@ -16,7 +16,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <strong><h1>Crawler.synom</h1></strong><br>
+  <strong>Crawler.synom</strong><br>
   <small> Only Pt-br words</small>
 </p>
 
