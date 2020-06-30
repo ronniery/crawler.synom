@@ -7,7 +7,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "dotenv": "^8.2.0",
-    "iconv-lite": "^0.5.1",
+    "iconv-lite": "^0.6.0",
     "lodash": "^4.17.15",
     "minimist": "^1.2.5",
     "mongoose": "^5.9.6",
