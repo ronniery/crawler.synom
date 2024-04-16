@@ -12,7 +12,7 @@
     "minimist": "^1.2.5",
     "mongoose": "^5.11.7",
     "request": "^2.88.2",
-    "request-promise": "^4.2.5",
+    "request-promise": "^4.2.6",
     "typescript": "^3.8.3",
     "xmlbuilder": "^15.1.0",
     "module-alias": "^2.2.2"
