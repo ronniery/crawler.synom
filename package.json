@@ -5,7 +5,7 @@
   "description": "Synonym crawler for www.sinonimo.com.br",
   "main": "index.js",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
+    "cheerio": "^1.0.0",
     "dotenv": "^8.2.0",
     "iconv-lite": "^0.5.1",
     "lodash": "^4.17.21",
