@@ -14,7 +14,7 @@
     "request": "^2.88.2",
     "request-promise": "^4.2.5",
     "typescript": "^3.8.3",
-    "xmlbuilder": "^15.1.0",
+    "xmlbuilder": "^15.1.1",
     "module-alias": "^2.2.2"
   },
   "devDependencies": {
